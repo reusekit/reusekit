@@ -1,0 +1,10 @@
+{
+  "name": "reusekit",
+  "version": "0.0.1",
+  "description": "Opensource-Reusable NextJS & NodeJS Components",
+  "main": "index.js",
+  "scripts": {
+  },
+  "author": "Gilson Gilbert",
+  "license": "MIT"
+}
