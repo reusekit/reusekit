@@ -1,15 +1,40 @@
 {
   "name": "reusekit",
-  "version": "0.0.1-b",
+  "version": "0.0.1-c",
   "description": "Opensource-Reusable NextJS & NodeJS Components",
   "repository": {
     "url": "https://github.com/reusekit/reusekit/"
   },
-  "keywords": ["reuseable","components","nextjs","reusekit"],
+  "keywords": [
+    "reuseable",
+    "components",
+    "nextjs",
+    "reusekit"
+  ],
   "homepage": "https://docs.reusekit.com",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "tsc --watch",
+    "test": "jest",
+    "lint": "eslint . --ext .ts,.tsx",
+    "storybook": "storybook dev",
+    "example": "cd example && npm run dev"
   },
   "author": "Gilson Gilbert",
-  "license": "MIT"
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "tsup": "^7.0.0",
+    "eslint": "^8.0.0",
+    "jest": "^29.0.0",
+    "storybook": "^7.0.0"
+  }
 }
