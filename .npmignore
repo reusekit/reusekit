@@ -5,4 +5,4 @@ package-lock.json
 .gitignore
 src
 node_modules
-storybook
+demo
