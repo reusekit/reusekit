@@ -1,10 +1,12 @@
 {
   "name": "reusekit",
-  "version": "0.0.1-a",
+  "version": "0.0.1-b",
   "description": "Opensource-Reusable NextJS & NodeJS Components",
   "repository": {
     "url": "https://github.com/reusekit/reusekit/"
   },
+  "keywords": ["reuseable","components","nextjs","reusekit"],
+  "homepage": "https://docs.reusekit.com",
   "main": "index.js",
   "scripts": {
   },
