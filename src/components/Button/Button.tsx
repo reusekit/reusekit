@@ -1,5 +1,5 @@
 import React from "react";
-import clsx from "clsx";
+import { clsx } from "clsx"; // Correct import
 
 type ButtonProps = {
   children: React.ReactNode;
@@ -17,7 +17,7 @@ const Button: React.FC<ButtonProps> = ({ children, onClick, variant = "primary",
         variant === "primary"
           ? "bg-blue-600 text-white hover:bg-blue-700"
           : "bg-gray-300 text-black hover:bg-gray-400",
-        className
+        className // Allows additional styles
       )}
     >
       {children}
