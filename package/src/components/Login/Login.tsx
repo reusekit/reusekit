@@ -4,9 +4,10 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 type LoginProps = {
   onSubmit: (email: string, password: string) => void;
+  loginTitle?: string;
 };
 
-const LoginWithEmailPassword: React.FC<LoginProps> = ({ onSubmit }) => {
+const LoginWithEmailPassword: React.FC<LoginProps> = ({ onSubmit, loginTitle = "Login" }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -21,7 +22,7 @@ const LoginWithEmailPassword: React.FC<LoginProps> = ({ onSubmit }) => {
       <div className="row justify-content-center">
         <div className="col-md-4">
           <div className="card p-4 shadow-sm">
-            <h3 className="text-center mb-3">Login</h3>
+            <h3 className="text-center mb-3">{loginTitle}</h3>
             <form onSubmit={handleSubmit}>
               <div className="mb-3">
                 <label className="form-label">Email</label>
