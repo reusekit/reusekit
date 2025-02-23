@@ -19,15 +19,19 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - name: Setup .npmrc
         run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}" > ~/.npmrc
-      - name: Build & Publish
+      - name: Prepare
         run: |
           cp LICENSE ./package/LICENSE
           cp README.md ./package/README.md
           git config --global user.email "gilzon.me@gmail.com"
           git config --global user.name "Gilson Gilbert"
           cd ./package
+      - name: Build
+        run: |
           npm i
           npm run build
+      - name: Publish
+        run: |
           npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
