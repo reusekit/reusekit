@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
-    "jsx": "react-jsx",  // Enables JSX support for React
+    "jsx": "react-jsx",
     "moduleResolution": "node",
     "baseUrl": "./",
     "paths": {
       "@reusekit/*": ["src/*"]
-    }
+    },
+    "outDir": "dist"
   }
 }

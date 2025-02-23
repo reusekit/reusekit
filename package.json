@@ -1,6 +1,6 @@
 {
   "name": "reusekit",
-  "version": "0.0.1-d",
+  "version": "0.0.1-e",
   "description": "Opensource-Reusable NextJS & NodeJS Components",
   "repository": {
     "url": "https://github.com/reusekit/reusekit/"
@@ -40,6 +40,7 @@
     ]
   },
   "dependencies": {
-    "@storybook/react": "^8.5.8"
+    "@storybook/react": "^8.5.8",
+    "clsx": "^2.1.1"
   }
 }
