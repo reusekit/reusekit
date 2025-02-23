@@ -1,6 +1,6 @@
 "use client"
-import { Button } from "reusekit";
+import { LoginWithEmailPassword } from "reusekit";
 
 export default function ButtonDemo() {
-  return <Button onClick={() => alert("Clicked!")}>Click Me</Button>;
+  return <LoginWithEmailPassword onSubmit={(email,password)=>{console.log(email,password)}}/>;
 }
