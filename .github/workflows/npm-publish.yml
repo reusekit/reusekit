@@ -21,8 +21,8 @@ jobs:
         run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}" > ~/.npmrc
       - name: Build & Publish
         run: |
-          cp .LICENSE ./package/LICENSE
-          cp .README.md ./package/README.md
+          cp LICENSE ./package/LICENSE
+          cp README.md ./package/README.md
           git config --global user.email "gilzon.me@gmail.com"
           git config --global user.name "Gilson Gilbert"
           cd ./package
