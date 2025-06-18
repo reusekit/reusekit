@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+a {
+  text-decoration: none !important;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -18,4 +22,28 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Documentation style improvements */
+main, .main-docs {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 1rem;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-weight: 700;
+  color: #171717;
+}
+p, li, ul, ol {
+  font-size: 1.08rem;
+  color: #444;
+}
+code, pre {
+  background: #f5f5f5;
+  color: #c7254e;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.98em;
 }
