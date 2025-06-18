@@ -21,17 +21,19 @@ jobs:
         run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}" > ~/.npmrc
       - name: Prepare
         run: |
-          cp LICENSE ./package/LICENSE
-          cp README.md ./package/README.md
+          cd ./package
+          cp ../LICENSE ./LICENSE
+          cp ../README.md ./README.md
           git config --global user.email "gilzon.me@gmail.com"
           git config --global user.name "Gilson Gilbert"
-          cd ./package
-      - name: Build
+      - name: Install and Build
         run: |
-          npm i
+          cd ./package
+          npm ci
           npm run build
       - name: Publish
         run: |
+          cd ./package
           npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
